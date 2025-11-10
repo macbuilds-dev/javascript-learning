@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, lightblue, blue);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 30px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 20px;
+      font-size: 1.8rem;
+    }
+
+    input {
+      padding: 12px;
+      width: 70%;
+      border: none;
+      border-radius: 8px 8px 8px 8px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 12px 20px;
+      border: none;
+      background: red;
+      color: white;
+      font-size: 16px;
+      border-radius: 8px 8px 8px 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: red;
+    }
+
+    .weather-info {
+      margin-top: 25px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      display: none;
+    }
+
+    .weather-info img {
+      width: 80px;
+      height: 80px;
+    }
+
+    .temp {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .error {
+      color: red;
+      margin-top: 15px;
+      font-weight: bold;
+      display: none;
+    }
+
+    .loading {
+      color: yellow;
+      margin-top: 15px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Weather App</h1>
+    <div>
+      <input type="text" id="cityInput" placeholder="Enter city name" /><br/><br/>
+      <button id="getWeather">Get Weather</button>
+    </div>
+
+    <div class="loading" id="loading">Loading...</div>
+    <div class="error" id="error"></div>
+
+    <div class="weather-info" id="weatherInfo">
+      <h2 id="cityName"></h2>
+      <img id="weatherIcon" src="" alt="Weather icon" />
+      <div class="temp" id="temperature"></div>
+      <p id="description"></p>
+    </div>
+  </div>
+
+  <script src="assets\scripts\app.js"></script>
+</body>
+</html>

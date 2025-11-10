@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Day 07 Task</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f4f4f4;
+    }
+    .task {
+      background: white;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h2 {
+        margin-top: 0;
+        color: #333;
+    }
+    input, button {
+      padding: 8px;
+      margin: 5px 0;
+      font-size: 16px;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+        background: #0056b3;
+    }
+    ul {
+        padding-left: 20px; 
+    }
+    .error {
+        color: red;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    .char-count {
+        font-weight: bold;
+         color: #555; 
+    }
+    .color-box {
+      width: 200px;
+      height: 100px;
+      margin-top: 10px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="task">
+  <h2>Dynamic List</h2>
+  <input type="text" id="listInput" placeholder="Enter item" />
+  <button id="addBtn">Add Item</button>
+  <ul id="itemList"></ul>
+</div>
+
+<div class="task">
+  <h2>Live Character Counter</h2>
+  <input type="text" id="charInput" placeholder="Type here..." />
+  <p class="char-count">Characters written: <span id="charCount">0</span></p>
+</div>
+
+<div class="task">
+  <h2>Color Picker</h2>
+  <input type="color" id="colorPicker" value="#ff0000" />
+  <div id="colorBox" class="color-box"></div>
+</div>
+
+<div class="task">
+  <h2>Number Guessing Game</h2>
+  <p>Guess a number between 1 and 100:</p>
+  <input type="number" id="guessInput" min="1" max="100" />
+  <button id="guessBtn">Guess</button>
+  <p id="guessMessage"></p>
+  <button id="playAgain" style="display:none;">Play Again</button>
+</div>
+
+<script src="assets\scripts\app.js"></script>
+</body>
+</html>

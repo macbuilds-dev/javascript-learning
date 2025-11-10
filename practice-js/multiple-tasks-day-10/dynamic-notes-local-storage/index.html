@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notes App</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .note-input {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .note-input input,
+    .note-input textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .note-input button {
+      padding: 10px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .note-input button:hover {
+      background: #0056b3;
+    }
+
+    #search {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .notes-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .note {
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .note h3 {
+      margin: 0 0 10px;
+    }
+
+    .note p {
+      color: #555;
+    }
+
+    .note .actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .note button {
+      padding: 5px 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .edit-btn {
+      background: #ffc107;
+    }
+
+    .delete-btn {
+      background: #dc3545;
+      color: #fff;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .modal-content h2 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    .modal-content input,
+    .modal-content textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .modal-buttons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .modal-buttons button {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .save-btn {
+      background: #28a745;
+      color: white;
+    }
+
+    .cancel-btn {
+      background: #6c757d;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Notes App</h1>
+    <div class="note-input">
+      <input type="text" id="title" placeholder="Note Title" />
+      <textarea id="content" placeholder="Write your note here..."></textarea>
+      <button id="addNote">Add Note</button>
+    </div>
+    <input type="text" id="search" placeholder="Search notes..." />
+    <div id="notesContainer" class="notes-container"></div>
+  </div>
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+      <h2>Edit Note</h2>
+      <input type="text" id="editTitle" placeholder="Edit Title" />
+      <textarea id="editContent" placeholder="Edit Content"></textarea>
+      <div class="modal-buttons">
+        <button class="cancel-btn" id="cancelEdit">Cancel</button>
+        <button class="save-btn" id="saveEdit">Save</button>
+      </div>
+    </div>
+  </div>
+  <script src="assets\scripts\app.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 06 Task</title>
+   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #141414;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background-color: #1f1f1f;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      width: 300px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    .name {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .location {
+      color: #c0ff4d;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+
+    .bio {
+      font-size: 0.85rem;
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+
+    .links button {
+      display: block;
+      width: 100%;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 8px;
+      margin: 8px 0;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: 0.3s ease;
+    }
+
+    .links button:hover {
+      background-color: #c0ff4d;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <img src="assets\pngs\image-2.jpg" alt="Profile Picture">
+    <div class="name">Jessica Randall</div>
+    <div class="location">London, United Kingdom</div>
+    <div class="bio">"Front-end developer and avid reader"</div>
+    <div class="links">
+      <button id="GitHub-Link" > GitHub </button>
+      <button id="Frontend-Mentor-Link" > Frontend Mentor </button>
+      <button id="LinkedIn-Link" > LinkedIn </button>
+      <button id="Twitter-Link" > Twitter </button>
+      <button id="Instagram-Link" > Instagram </button>
+    </div>
+  </div>
+  <script src="assets\script\app.js"></script>
+</body>
+</html>

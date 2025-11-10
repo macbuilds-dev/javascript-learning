@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stopwatch</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #282c34;
+      color: #fff;
+    }
+
+    .timer {
+      font-size: 4rem;
+      font-weight: bold;
+      letter-spacing: 3px;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #startBtn { background: lightgreen; color: white; }
+    #stopBtn { background: yellow; color: black; }
+    #resetBtn { background: red; color: white; }
+
+    button:hover {
+      opacity: 0.9;
+      transform: scale(1.05);
+    }
+
+    button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+  </style>
+</head>
+<body>
+    <div class="timer">My Digital Stop Watch</div>  
+    <div class="timer" id="timer">00:00:00</div>
+    <div class="buttons">
+        <button id="startBtn">Start</button>
+        <button id="stopBtn" disabled>Stop</button>
+        <button id="resetBtn">Reset</button>
+    </div>
+    <script src="assets\scripts\app.js"></script>
+</body>
+</html>
